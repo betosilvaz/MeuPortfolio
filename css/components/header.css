@@ -1,0 +1,35 @@
+header {
+    width: 100vw;
+    padding: 1rem 2rem;
+    box-shadow: 5px 0px 6px rgb(122, 122, 122);
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0px;
+    background-color: var(--white-background);
+}
+
+header > nav {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 992px;
+    max-width: 992px;
+}
+
+header > nav > a {
+    font-weight: 600;
+    color: var(--secondary);
+}
+header > nav > a > span {
+    color: var(--dark-primary-color);
+}
+
+header > nav > ul {
+    display: flex;
+    column-gap: 1.5rem;
+}
+
+header > nav > ul a {
+    font-weight: 500;
+    color: var(--dark-text);
+}

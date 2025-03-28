@@ -1,0 +1,27 @@
+/* style.css - Arquivo principal */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root  {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    --primary-color: #3498db;
+    --dark-primary-color: #48762e;
+    --secondary: #354d2a;
+    --light-background: #ecf0f1;
+    --white-background: #ffffff;
+    --dark-text: #333333;
+    --grey-text: #777777;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style-type: none;
+}
