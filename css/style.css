@@ -1,21 +1,52 @@
-/* style.css - Arquivo principal */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
+    color: var(--dark-text);
+    font-size: 1rem;
 }
 
-:root  {
-    font-family: 'Poppins', sans-serif;
+:root {
     font-size: 16px;
-    --primary-color: #3498db;
-    --dark-primary-color: #48762e;
+    font-family: 'Poppins', sans-serif;
+    --primary: #5a933c;
+    --dark-primary: #48762e;
     --secondary: #354d2a;
     --light-background: #ecf0f1;
-    --white-background: #ffffff;
+    --white-background: white;
     --dark-text: #333333;
     --grey-text: #777777;
+}
+
+/*
+    nos dois seletores seguintes, o min-height em conjunto com o flex é
+    utilizado para garantir que mesmo que a pagina possua pouco conteudo
+    o footer permaneça no bottom do viewport
+*/
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-background);
+}
+
+main {
+    flex-grow: 1;
+}
+
+/*
+    remoção de algumas propriedades padrão e normalização de outras
+*/
+
+h1 {
+    font-size: 2rem;
+}
+
+h2, h3, h4, h5, h6 {
+    font-size: 1.5rem;
 }
 
 a {
@@ -24,4 +55,27 @@ a {
 
 ul, ol {
     list-style-type: none;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+}
+
+input, textarea, select {
+    border: 1px solid var(--light-background)
+}
+
+/*
+    classe utilizada ao longo do projeto para limitar o tamanho
+    horizontal do conteudo 
+*/
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+
+.subtitle {
+    color: var(--secondary);
 }

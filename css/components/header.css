@@ -1,35 +1,114 @@
 header {
-    width: 100vw;
-    padding: 1rem 2rem;
-    box-shadow: 5px 0px 6px rgb(122, 122, 122);
     display: flex;
     justify-content: center;
+    max-width: 100vw;
+    width: 100%;
+    background-color: var(--light-background);
+    box-shadow: 0px 0 5px rgb(187, 187, 187);
+    padding: 1rem 2rem;
     position: sticky;
     top: 0px;
-    background-color: var(--white-background);
+    z-index: 1000;
 }
 
-header > nav {
+header>nav {
     display: flex;
     justify-content: space-between;
-    flex-basis: 992px;
-    max-width: 992px;
 }
 
-header > nav > a {
-    font-weight: 600;
-    color: var(--secondary);
-}
-header > nav > a > span {
-    color: var(--dark-primary-color);
-}
-
-header > nav > ul {
+header ul {
     display: flex;
     column-gap: 1.5rem;
 }
 
-header > nav > ul a {
-    font-weight: 500;
+#logo {
+    color: var(--secondary);
+    font-weight: bolder;
+}
+
+#logo span {
+    color: var(--primary);
+}
+
+header ul a {
     color: var(--dark-text);
+    font-weight: 500;
+}
+
+header ul a:hover {
+    color: var(--primary);
+}
+
+.hamburguer-button,
+.hamburguer-button>nav,
+#hamburguer-check {
+    display: none;
+}
+
+.hamburguer-button>nav {
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 1.5rem;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    padding: 2rem;
+    background-color: var(--light-background);
+    left: 0px;
+    top: 0px;
+}
+
+
+/* ============= bottom border animation =============*/
+
+header ul a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width 0.5s;
+}
+
+.baseline-active::after {
+    width: 100%;
+}
+
+.baseline-active {
+    color: var(--primary);
+}
+
+header ul a:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    header>nav>ul {
+        display: none;
+    }
+
+    .hamburguer-button {
+        display: block;
+    }
+
+    label[for="hamburguer-check"]:hover {
+        cursor: pointer;
+    }
+
+    #hamburguer-check:checked~nav * {
+        font-size: 2rem;
+    }
+
+    #hamburguer-check:checked~nav {
+        display: flex;
+    }
+
+    #hamburguer-check:checked~nav ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
 }

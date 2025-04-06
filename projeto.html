@@ -1,69 +1,124 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portfólio | Projeto Detalhado</title>
-
-    <!-- Importando fonte Poppins do Google fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components/header.css">
     <link rel="stylesheet" href="css/components/footer.css">
     <link rel="stylesheet" href="css/components/buttons.css">
     <link rel="stylesheet" href="css/pages/project.css">
 </head>
+
 <body>
     <!-- Header -->
-    <a href="index.html">Meu<span>Portfólio</span></a>
-    <a href="index.html">Início</a>
-    <a href="portfolio.html">Portfólio</a>
-    <a href="contato.html">Contato</a>
+    <header>
+        <nav class="container">
+            <a href="index.html" id="logo">Meu<span>Portfólio</span></a>
+            <ul>
+                <li><a href="index.html" class="baseline-active">Início</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <div class="hamburguer-button">
+                <label for="hamburguer-check"><i class="fa-solid fa-bars"></i></label>
+                <input type="checkbox" id="hamburguer-check">
+                <nav>
+                    <a href="index.html" id="logo">Meu<span>Portfólio</span></a>
+                    <ul>
+                        <li><a href="index.html" class="baseline-active">Início</a></li>
+                        <li><a href="portfolio.html">Portfólio</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+    </header>
 
-    <!-- Project Details -->    
-    <a href="portfolio.html"><!-- ícone fa-arrow-left --> Voltar ao Portfólio</a>
-    <h1>Website Corporativo</h1>
-    <span>Web Design</span>
-    <span>Janeiro 2023</span>
-    <img src="assets/images/projects/project1.png" alt="Website Corporativo">               
-    <h2>Sobre o Projeto</h2>
-    <p>Desenvolvimento completo de um website corporativo para uma empresa de tecnologia. O projeto incluiu design de interface, desenvolvimento front-end e integração com CMS.</p>
-    <p>O objetivo principal era criar uma presença online profissional que destacasse os serviços da empresa e melhorasse a conversão de leads.</p>
-                    
-    <h3>Cliente</h3>
-    <p>TechSolutions Inc.</p>
-    <h3>Tecnologias</h3>
-    <p>HTML5, CSS3, JavaScript, WordPress</p>
-    <h3>Duração</h3>
-    <p>3 meses</p>
-    <h3>Desafios</h3>
-    <p>Integração com API de pagamento, Design Responsivo</p>
+    <!-- Project Details -->
+    <main class="container">
+        <a href="portfolio.html" class="go-back-button"><i class="fa-solid fa-arrow-left"></i> Voltar ao Portfólio</a>
+        <section class="project">
+            <section class="project-header">
+                <h1>Website Corporativo</h1>
+                <span>Web Design</span>
+                <span>Janeiro 2023</span>
+            </section>
+            <img src="assets/images/projects/project1.png" alt="Website Corporativo">
+            <section class="about-project">
+                <h2>Sobre o Projeto</h2>
+                <p>Desenvolvimento completo de um website corporativo para uma empresa de tecnologia. O projeto incluiu
+                    design
+                    de interface, desenvolvimento front-end e integração com CMS.</p>
+                <p>O objetivo principal era criar uma presença online profissional que destacasse os serviços da empresa
+                    e
+                    melhorasse a conversão de leads.</p>
 
-                            
-    <h2>Galeria do Projeto</h2>
-    <img src="assets/images/projects/project1-1.png" alt="Tela inicial do website">
-    <img src="assets/images/projects/project1-2.png" alt="Página de serviços">
-    <img src="assets/images/projects/project1-3.png" alt="Versão mobile">
-    <img src="assets/images/projects/project1-4.png" alt="Dashboard administrativo">
-                
-    <a href="#"><!-- ícone fa-external-link-alt --> Visitar Site</a>
-    <a href="portfolio.html"><!-- ícone fa-arrow-left --> Voltar ao Portfólio</a>
+                <section class="project-info">
+                    <div>
+                        <h3>Cliente</h3>
+                        <p>TechSolutions Inc.</p>
+                    </div>
+                    <div>
+                        <h3>Tecnologias</h3>
+                        <p>HTML5, CSS3, JavaScript, WordPress</p>
+                    </div>
+                    <div>
+                        <h3>Duração</h3>
+                        <p>3 meses</p>
+                    </div>
+                    <div>
+                        <h3>Desafios</h3>
+                        <p>Integração com API de pagamento, Design Responsivo</p>
+                    </div>
+                </section>
+            </section>
+            <section class="project-galery">
+                <h2>Galeria do Projeto</h2>
+                <div class="galery">
+                    <img src="assets/images/projects/project1-1.png" alt="Tela inicial do website">
+                    <img src="assets/images/projects/project1-2.png" alt="Página de serviços">
+                    <img src="assets/images/projects/project1-3.png" alt="Versão mobile">
+                    <img src="assets/images/projects/project1-4.png" alt="Dashboard administrativo">
+                </div>
+            </section>
+            <div class="project-buttons">
+                <a href="#" class="primary-button"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visitar Site</a>
+                <a href="portfolio.html" class="primary-button"><i class="fa-solid fa-arrow-left"></i> Voltar ao Portfólio</a>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <h3>Sobre Mim</h3>
-    <p>Desenvolvedor Front-end apaixonado por criar experiências web incríveis.</p>
-    <h3>Links Rápidos</h3>
-    <a href="index.html">Início</a>
-    <a href="portfolio.html">Portfólio</a>
-    <a href="contato.html">Contato</a>
-    <h3>Redes Sociais</h3>
-    <a href="#"><!-- ícone fa-github -->github</a>
-    <a href="#"><!-- ícone fa-linkedin -->linkedin</a>
-    <a href="#"><!-- ícone fa-twitter -->twitter</a>
-    <p>&copy; 2025 Meu Portfólio. Todos os direitos reservados.</p>
+    <footer>
+        <div class="links container">
+            <div>
+                <h3>Sobre Mim</h3>
+                <p>Desenvolvedor Front-end apaixonado por criar experiências web incríveis.</p>
+            </div>
+            <div>
+                <h3>Links Rápidos</h3>
+                <a href="index.html">Início</a>
+                <a href="portfolio.html">Portfólio</a>
+                <a href="contato.html">Contato</a>
+            </div>
+            <div>
+                <h3>Redes Sociais</h3>
+                <ul class="socials">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2025 Meu Portfólio. Todos os direitos reservados.</p>
+    </footer>
 
 </body>
+
 </html>

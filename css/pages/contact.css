@@ -1,0 +1,39 @@
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 03rem auto;
+}
+
+.contact-section {
+    padding: 1rem;
+}
+
+.contact-section > div {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'div1 div2';
+    gap: 1.5rem 2rem;
+}
+
+/* ============ ADDRESS ============ */
+
+.contact-section address {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    grid-area: div2;
+}
+
+iframe {
+    box-shadow: 0 0 10px rgba(167, 167, 167, 0.26);
+}
+
+@media (max-width: 992px) {
+    .contact-section > div {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'div2'
+            'div1';
+    }
+}
